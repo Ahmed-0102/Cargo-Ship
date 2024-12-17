@@ -1,0 +1,129 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #007bff;
+  color: #fff;
+  height: 60px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header .header-title {
+  margin: 0;
+}
+
+header .logout-button {
+  margin-left: 20px;
+  padding: 10px 15px;
+  background-color: #f44336;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header .logout-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Main Layout Styles */
+main {
+  display: flex;
+  flex: 1; /* Allow main to fill remaining space */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  height: calc(100vh - 60px); /* Full height minus header height */
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.collapsed-sidebar .sidebar {
+  transform: translateX(-100%);
+}
+
+.collapsed-sidebar .content {
+  margin-left: 0;
+}
+
+.side-nav {
+  padding: 20px;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav ul li {
+  margin-bottom: 10px;
+}
+
+/* Link Styles */
+.side-nav ul li .link {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 10px;
+  transition: color 0.3s, background-color 0.3s; 
+}
+
+/* Active Link Styles */
+.side-nav ul li .link.active-link {
+  background-color: #007bff; /* Active link background color */
+  color: white; /* Active link text color */
+}
+
+/* Hover Effect */
+.side-nav ul li .link:hover {
+  background-color: #007bff;
+  color: white; /* Text color changes to white on hover */
+}

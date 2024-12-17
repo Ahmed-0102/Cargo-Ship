@@ -1,0 +1,65 @@
+.myForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="date"] {
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button,
+.btn-primary {
+  padding: 5px 10px;  /* Adjusted padding for consistent size */
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-left: 10px;
+  min-width: 100px;  /* Ensure buttons have the same minimum width */
+}
+
+button:focus,
+select:focus,
+input[type="date"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+thead th {
+  background-color: #007bff;
+  color: white;
+}
+
+tbody tr:hover {
+  background-color: #e2f1ff;
+}
+
+.rounded {
+  border-radius: 5px;
+  overflow: hidden;
+}
